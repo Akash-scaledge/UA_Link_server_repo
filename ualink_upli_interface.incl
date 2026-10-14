@@ -1,0 +1,4 @@
+
+`include "ualink_upli_orignator_interface.svi"
+`include "ualink_upli_completer_interface.svi"
+`include "ualink_upli_interface.svi"

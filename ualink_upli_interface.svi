@@ -1,0 +1,85 @@
+
+`ifndef UALINK_UPLI_INTERFACE_SVI
+`define UALINK_UPLI_INTERFACE_SVI
+
+typedef virtual ualink_upli_orignator_interface upli_orignator_vif_t;
+typedef virtual ualink_upli_completer_interface upli_completer_vif_t;
+
+interface ualink_upli_interface(input upli_clk, input upli_resetn);
+
+  ualink_upli_orignator_interface upli_orignator_interface[`UPLI_NUM_OF_ORIGNATOR_IF](upli_clk, upli_resetn);
+  ualink_upli_completer_interface upli_completer_interface[`UPLI_NUM_OF_ORIGNATOR_IF](upli_clk, upli_resetn);
+
+  function upli_orignator_vif_t get_orignator_if(int index);
+    case(index)
+    `ifdef UPLI_ORIGNATOR_INTF_0
+      0: get_orignator_if = upli_orignator_interface[0];
+    `endif // UPLI_ORIGNATOR_INTF_0
+    `ifdef UPLI_ORIGNATOR_INTF_1
+      1: get_orignator_if = upli_orignator_interface[1];
+    `endif // UPLI_ORIGNATOR_INTF_1
+    `ifdef UPLI_ORIGNATOR_INTF_2
+      2: get_orignator_if = upli_orignator_interface[2];
+    `endif // UPLI_ORIGNATOR_INTF_2
+    `ifdef UPLI_ORIGNATOR_INTF_3
+      3: get_orignator_if = upli_orignator_interface[3];
+    `endif // UPLI_ORIGNATOR_INTF_3
+    `ifdef UPLI_ORIGNATOR_INTF_4
+      4: get_orignator_if = upli_orignator_interface[4];
+    `endif // UPLI_ORIGNATOR_INTF_4
+    `ifdef UPLI_ORIGNATOR_INTF_5
+      5: get_orignator_if = upli_orignator_interface[5];
+    `endif // UPLI_ORIGNATOR_INTF_5
+    `ifdef UPLI_ORIGNATOR_INTF_6
+      6: get_orignator_if = upli_orignator_interface[6];
+    `endif // UPLI_ORIGNATOR_INTF_6
+    `ifdef UPLI_ORIGNATOR_INTF_7
+      7: get_orignator_if = upli_orignator_interface[7];
+    `endif // UPLI_ORIGNATOR_INTF_7
+    `ifdef UPLI_ORIGNATOR_INTF_8
+      8: get_orignator_if = upli_orignator_interface[8];
+    `endif // UPLI_ORIGNATOR_INTF_8
+    `ifdef UPLI_ORIGNATOR_INTF_9
+      9: get_orignator_if = upli_orignator_interface[9];
+    `endif // UPLI_ORIGNATOR_INTF_9
+    endcase
+  endfunction
+
+  function upli_completer_vif_t get_completer_if(int index);
+    case(index)
+    `ifdef UPLI_COMPLETER_INTF_0
+      0: get_completer_if = upli_completer_interface[0];
+    `endif // UPLI_COMPLETER_INTF_0
+    `ifdef UPLI_COMPLETER_INTF_1
+      1: get_completer_if = upli_completer_interface[1];
+    `endif // UPLI_COMPLETER_INTF_1
+    `ifdef UPLI_COMPLETER_INTF_2
+      2: get_completer_if = upli_completer_interface[2];
+    `endif // UPLI_COMPLETER_INTF_2
+    `ifdef UPLI_COMPLETER_INTF_3
+      3: get_completer_if = upli_completer_interface[3];
+    `endif // UPLI_COMPLETER_INTF_3
+    `ifdef UPLI_COMPLETER_INTF_4
+      4: get_completer_if = upli_completer_interface[4];
+    `endif // UPLI_COMPLETER_INTF_4
+    `ifdef UPLI_COMPLETER_INTF_5
+      5: get_completer_if = upli_completer_interface[5];
+    `endif // UPLI_COMPLETER_INTF_5
+    `ifdef UPLI_COMPLETER_INTF_6
+      6: get_completer_if = upli_completer_interface[6];
+    `endif // UPLI_COMPLETER_INTF_6
+    `ifdef UPLI_COMPLETER_INTF_7
+      7: get_completer_if = upli_completer_interface[7];
+    `endif // UPLI_COMPLETER_INTF_7
+    `ifdef UPLI_COMPLETER_INTF_8
+      8: get_completer_if = upli_completer_interface[8];
+    `endif // UPLI_COMPLETER_INTF_8
+    `ifdef UPLI_COMPLETER_INTF_9
+      9: get_completer_if = upli_completer_interface[9];
+    `endif // UPLI_COMPLETER_INTF_9
+    endcase
+  endfunction
+
+endinterface: ualink_upli_interface
+
+`endif // //UALINK_UPLI_INTERFACE_SVI

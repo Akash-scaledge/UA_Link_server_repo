@@ -1,0 +1,7 @@
+`include "ualink_upli_completer_common.sv"
+`include "ualink_upli_completer_active_common.sv"
+`include "ualink_upli_completer_monitor_common.sv"
+`include "ualink_upli_completer_driver.sv"
+`include "ualink_upli_completer_monitor.sv"
+`include "ualink_upli_completer_sequencer.sv"
+`include "ualink_upli_completer_agent.sv"

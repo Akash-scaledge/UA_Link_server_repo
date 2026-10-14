@@ -1,0 +1,8 @@
+
+`include "ualink_upli_config.sv"
+`include "ualink_upli_env_config.sv"
+`include "ualink_upli_transaction.svh"
+`include "ualink_upli_orignator_transaction.sv"
+`include "ualink_upli_completer_transaction.sv"
+`include "ualink_upli_common.sv"
+

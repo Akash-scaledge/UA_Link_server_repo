@@ -1,0 +1,7 @@
+`include "ualink_upli_orignator_common.sv"
+`include "ualink_upli_orignator_active_common.sv"
+`include "ualink_upli_orignator_monitor_common.sv"
+`include "ualink_upli_orignator_driver.sv"
+`include "ualink_upli_orignator_monitor.sv"
+`include "ualink_upli_orignator_sequencer.sv"
+`include "ualink_upli_orignator_agent.sv"
